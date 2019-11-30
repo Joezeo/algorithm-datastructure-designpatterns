@@ -2,6 +2,10 @@ package com.joezeo.algorithm.quicksort;
 
 import java.util.Arrays;
 
+/**
+ * 快速排序
+ * 时间复杂度 O(log2n)
+ */
 public class QuickSort {
     public static void main(String[] args) {
         //测试
@@ -11,7 +15,8 @@ public class QuickSort {
         System.out.println(Arrays.toString(arr));
     }
 
-    public static void quickSort(int[] arr){
+    public static void
+    quickSort(int[] arr){
         quickSort(arr, 0, arr.length-1);
     }
 
