@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/arithmetic- datastructure-designmode.iml" filepath="$PROJECT_DIR$/arithmetic- datastructure-designmode.iml" />
+      <module fileurl="file://$PROJECT_DIR$/algorithm-datastructure-designpatterns.iml" filepath="$PROJECT_DIR$/algorithm-datastructure-designpatterns.iml" />
     </modules>
   </component>
 </project>
