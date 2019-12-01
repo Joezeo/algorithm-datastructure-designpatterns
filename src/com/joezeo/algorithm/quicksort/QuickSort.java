@@ -37,7 +37,7 @@ public class QuickSort {
             while (arr[j] >= val && i < j) {
                 j--;
             }
-            //找到了比val小的值，把此值放入左边的坑中，此时坑的位置变为j
+            //从右边找到了比val小的值，把此值放入左边的坑中，此时坑的位置变为j
             if (i < j)
                 arr[i++] = arr[j];
 
