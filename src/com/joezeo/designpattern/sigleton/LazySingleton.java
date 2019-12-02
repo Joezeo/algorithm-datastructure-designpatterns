@@ -49,9 +49,10 @@ public class LazySingleton {
         CountDownLatch latch = new CountDownLatch(1000);
 
         for (int i = 0; i < 1000; i++) {
-            new Thread(new Runnable() {
-                @Override
-                public void run() {
+            // 使用lambda表达式代替匿名对象的建立
+            // lambda表达式：带参数变量的表达式
+            // 基本形式：(参数)->{ 表达式 }
+            new Thread(()-> {
                     //加入延迟
                     try {
                         Thread.sleep(1000);
@@ -60,7 +61,6 @@ public class LazySingleton {
                     }
                     vector.add(LazySingleton.getInstance());
                     latch.countDown();
-                }
             }).start();
         }
 

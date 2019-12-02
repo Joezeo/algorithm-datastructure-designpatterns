@@ -32,9 +32,7 @@ public class HungerSingleton {
         CountDownLatch latch = new CountDownLatch(1000);
 
         for (int i = 0; i < 1000; i++) {
-            new Thread(new Runnable() {
-                @Override
-                public void run() {
+            new Thread(()-> {
                     //加入延迟
                     try {
                         Thread.sleep(800);
@@ -43,7 +41,6 @@ public class HungerSingleton {
                     }
                     vector.add(HungerSingleton.getInstance());
                     latch.countDown();
-                }
             }).start();
         }
 

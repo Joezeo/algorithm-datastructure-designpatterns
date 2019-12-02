@@ -36,16 +36,14 @@ public class StaticInnerClassSingleton {
 
     //测试
     public static void main(String[] args) {
-        // 我这里创建一个vector来装下面1000个线程里获取的HungerSingleton对象(ArrayList线程不安全)
+        // 我这里创建一个vector来装下面1000个线程里获取的StaticInnerClassSingleton对象(ArrayList线程不安全)
         Vector<StaticInnerClassSingleton> vector = new Vector<>();
 
         //计数器，用于开始主线程
         CountDownLatch latch = new CountDownLatch(1000);
 
         for (int i = 0; i < 1000; i++) {
-            new Thread(new Runnable() {
-                @Override
-                public void run() {
+            new Thread(()-> {
                     //加入延迟
                     try {
                         Thread.sleep(800);
@@ -54,7 +52,6 @@ public class StaticInnerClassSingleton {
                     }
                     vector.add(StaticInnerClassSingleton.getInstance());
                     latch.countDown();
-                }
             }).start();
         }
 
