@@ -70,6 +70,7 @@ public class ArrayList_s<E> implements List<E> {
     public boolean add(E e) {
         ensureCapacity(size+1);
         data[size++] = e;
+        // ArrayList本身的存储过程于此类似 可以看出ArrayList是线程不安全的
         return true;
     }
 
