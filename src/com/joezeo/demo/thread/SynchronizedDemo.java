@@ -8,4 +8,5 @@ public class SynchronizedDemo {
     public synchronized void hello(){
         System.out.println("Hello World");
     }
+
 }
