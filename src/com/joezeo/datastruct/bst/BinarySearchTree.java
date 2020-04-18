@@ -145,9 +145,7 @@ public class BinarySearchTree<T extends Comparable<T>> {
         System.out.println();
     }
 
-
     /*-------------------------------private methods---------------------------------*/
-
     /**
      * 将数据插入二叉搜索树中
      * 使用了递归的方式存数据
